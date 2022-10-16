@@ -1,8 +1,6 @@
 <?php
 
+use App\Http\Livewire\HomeComponent;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    $test = request();
-    return view('welcome');
-});
+Route::get('/', HomeComponent::class)->name('home');
