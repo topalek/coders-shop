@@ -114,7 +114,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
+                        <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">com
                             <div class="product product-style-3 equal-elem ">
                                 <div class="product-thumnail">
                                     <a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">

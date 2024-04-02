@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +25,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/chosen.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/color-01.css')}}">
+
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Styles -->
     @livewireStyles
 </head>
 <body class="home-page home-01 ">
@@ -513,7 +524,7 @@
         </div>
     </div>
 </footer>
-
+@stack('modals')
 <script src="{{asset("assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4")}}"></script>
 <script src="{{asset("assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4")}}"></script>
 <script src="{{asset("assets/js/bootstrap.min.js")}}"></script>
